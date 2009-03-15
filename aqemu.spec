@@ -6,6 +6,7 @@ License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/aqemu/%{name}-%{version}.tar.bz2
 # Source0-md5:	a9e731e6202d72fff9aa77e9d9cadc87
+Patch0:		%{name}-regex.patch
 URL:		http://sourceforge.net/projects/aqemu/
 BuildRequires:	QtGui-devel
 BuildRequires:	QtTest-devel
@@ -23,6 +24,7 @@ and KVM options.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 qmake-qt4 AQEMU.pro
