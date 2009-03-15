@@ -1,0 +1,11 @@
+--- aqemu-0.7/Main_Window.cpp.orig	2009-03-03 14:57:37.000000000 +0100
++++ aqemu-0.7/Main_Window.cpp	2009-03-15 01:16:19.000000000 +0100
+@@ -89,7 +89,7 @@
+ 	Check_Network_Card = true;
+ 	
+ 	// IP Address
+-	QRegExp rx( "^([1-9]|[1-9][\\d]|[1][\\d][\\d]|2[0-4][\\d]|25[0-5])(\\.([1-9]|[1-9][\\d]|[1][\\d][\\d]|2[0-4][\\d]|25[0-5])){3}$" );
++	QRegExp rx( "^([1-9]|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])){3}$" );
+ 	QValidator *validator = new QRegExpValidator( rx, this );
+ 	ui.Edit_IP_Address->setValidator( validator );
+ 	
